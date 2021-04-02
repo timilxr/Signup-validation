@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="main">
+		<h1>Create Account</h1>
+		<p>It's free and hardly takes more than 30 seconds.</p>
+		<form action="" method="POST" name="form1">
+			<input type="text" name="username" id="name" placeholder="Username" />
+			<p id="errorname">Error!! Kindly check username</p>
+			<input type="text" name="email" id="email" placeholder="Email Address" />
+			<p id="errormail">Error!! Kindly check email</p>
+			<input type="password" name="password1" id="password1" placeholder="Password" />
+			<p id="errorpass1">Error!! Kindly check password</p>
+			<p id="instruction">password must be atleast 6 characters including atleast 1 uppercase, 1 lowercase and a number.</p>
+			<input type="text" name="password2" id="password2" placeholder="Confirm Password" />
+			<p id="errorpass2">Error!! Passwords don't match</p>
+			<input type="submit" value="Sign Up" onclick="validate(); return false;">
+		</form>
+		<p id="agreement">By clicking the Sign Up button, you agree to our <a href="#">Terms & Conditions</a>, and <a href="#">Privacy Policy</a>.</p>
+	</div>
+	<script>
+		function validate(){
+			var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+			var passformat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+			var name = document.form1.name.value;
+			var email = document.form1.email.value;
+			var password1 = document.form1.password1.value;
+			var password2 = document.form1.password2.value;
+			if (!name) {
+				document.getElementById('errorname').style.display = 'block';
+			}
+			if (!email) {
+				document.getElementById('errormail').style.display = 'block';
+			}
+			if (!password1) {
+				document.getElementById('errorpass1').style.display = 'block';
+			}
+			if (!password2) {
+				document.getElementById('errorpass2').style.display = 'block';
+			}
+			if (!email.match(mailformat)){
+				document.getElementById('errormail').style.display = 'block';
+			}
+			if (!password1.match(passformat)){
+				document.getElementById('errorpass1').style.display = 'block';
+			}
+			if (password1.localeCompare(password2) !== 0){
+				document.getElementById('errorpass2').style.display = 'block';
+			}
+			alert("Congrats!! Sign up successful");
+		}
+	</script>
+</body>
+</html>

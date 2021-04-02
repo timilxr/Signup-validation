@@ -1,0 +1,86 @@
+body{
+	text-align: center;
+	color: grey;
+}
+#main{
+	padding: 20px;
+	width: 80vw;
+	margin: auto;
+	margin-top: 50px;
+	border-radius: 4px;
+	box-shadow: 0px 2px 5px #a0a0a0;
+	font-family: helvetica, arial;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  color: #000;
+  border-bottom: 2px solid silver;
+  border-radius: 4px;
+  font-size: 16px;
+  opacity: 0.7;
+  margin-top: 20px;
+  background-color: white;
+  padding: 12px 20px 12px 50px;
+}
+#name{
+	background-image: url(user-icon.png);
+  background-position: 10px 5px; 
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+}
+#email{
+	background-image: url(mail-icon.png);
+  background-position: 10px 5px; 
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+}
+#password1{
+	background-image: url(lock-icon.png);
+  background-position: 10px 5px; 
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+}
+#password2{
+	background-image: url(correct-pass.png);
+  background-position: 10px 5px; 
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+}
+input[type=submit] {
+	width: 100%;
+	color: white;
+	margin-top: 20px;
+	font-size: 18px;
+	padding: 12px 0px;
+	font-weight: bold;
+	background-color: #146f60;
+	border-radius: 5px;
+	border: none;
+}
+a{
+	color: #146f60;
+	text-decoration: none;
+}
+#errorname, #errormail, #errorpass1, #errorpass2{
+	display: none;
+	color: red;
+	text-align: left;
+	margin-left: 50px;
+	font-size: 12px;
+}
+#instruction{
+	color: blue;
+	text-align: left;
+	margin-left: 50px;
+	font-size: 12px;
+}
+#agreement{
+	font-size: 13px;
+}
+@media (min-width: 376px) {
+	#main{
+		width: 50vw;
+	}
+}
